@@ -2,7 +2,7 @@ program lu
 integer,parameter:: n=3
 integer p
 real A(n,n),L(n,n),U(n,n),sgm
-A=reshape((/12,1,3,3,5,7,-5,3,13,1,28,76/),shape(A))
+A=reshape((/12,1,3,3,5,7,-5,3,13/),shape(A))
 L=0.0
 U=0.0
 do i=1,n

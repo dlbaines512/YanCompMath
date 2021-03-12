@@ -27,9 +27,13 @@ do while ( errr>tol)
 enddo
 
 open(10,file="result.dat")
-do j=0,n
-	write(10,*) (T(i,j),i=0,m)
-enddo
+		write(10,*) "variables=x,y,T"
+		write(10,*)  "zone ", "i= ", m+1, " j= ", n+1
+		do j=0,m
+			do i=0,n
+				write(10,*) 0+i*0.01,0+j*0.01,T(i,j)
+			enddo
+		enddo
 close(10)
 
 
